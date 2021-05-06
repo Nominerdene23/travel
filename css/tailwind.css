@@ -1,0 +1,74 @@
+@tailwind base;
+  
+@tailwind components;
+
+@layer components;
+
+.btn-gray{
+    @apply inline-block bg-gray-800 px-6 py-2 uppercase rounded-md shadow-lg text-sm text-white 
+    tracking-wider font-semibold;
+}
+
+.btn-gray:hover{
+    @apply bg-gray-600;
+}
+
+.header {
+    height: 400px;
+}
+
+.hero {
+   z-index: -10;
+}
+
+.btn-gray:active{
+    @apply bg-gray-800;
+}
+
+.movie-card {
+    @apply flex flex-shrink-0;
+  }
+  
+  .movie-card-link {
+    @apply relative block mx-2;
+  }
+  
+  .movie-card-content {
+    @apply absolute inset-0 bg-black opacity-75 p-4 hidden flex-col justify-end text-white cursor-pointer;
+  }
+  
+  .movie-card-title {
+    @apply text-lg mb-2;
+  }
+  
+  .movie-card-text {
+    @apply leading-normal select-none;
+  }
+
+  .movie-card-image {
+    @apply h-80 w-60;
+  }
+  .trailer {
+    height: 300px;
+  }
+  .btn-primary {
+    @apply bg-transparent uppercase border border-yellow-600 text-yellow-600 px-10 py-3 inline-block;
+  }
+
+  .btn-primary:hover{
+    @apply bg-yellow-600 text-white cursor-pointer;
+  }
+@screen md{
+    .btn-gray{
+        @apply text-lg;
+    }
+
+    .header {
+        height: 650px;
+    }
+
+    .trailer {
+      height: 600px;
+    }
+}
+@tailwind utilities;
